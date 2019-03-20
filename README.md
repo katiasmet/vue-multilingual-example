@@ -1,21 +1,6 @@
-# boilerplate-vue
+# Simple multilingual Vue example
+Example for a multilingual vue app. System can be used in combination with Craft or Laravel.
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
+## Features
+- multilingual translations
+- multilingual slugs
