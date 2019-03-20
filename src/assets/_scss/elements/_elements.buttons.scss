@@ -1,0 +1,17 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/**
+ * Implements better button defaults
+ */
+
+button {
+  background: none;
+  border: 1px solid $gray;
+  cursor: pointer;
+
+  &:focus {
+    outline: thin dotted;
+  }
+}

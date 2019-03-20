@@ -1,0 +1,116 @@
+/* ==========================================================================
+   #HEADER
+   ========================================================================== */
+
+/**
+ * 1. Adjust to fit approximately the height of the unfolded mobile nav
+ * 2. Add an transition max-height to create a smooth toggle effect
+ */
+
+.c-header {
+  @include inuit-font-size(14px);
+  display: flex;
+  padding: $inuit-global-spacing-unit 0;
+
+  @include mq($from: tablet) {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include mq($until: tablet) {
+    flex-direction: column;
+  }
+}
+
+/* Main
+   ========================================================================== */
+.c-header__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Brand
+   ========================================================================== */
+
+.c-header__brand {
+  display: block;
+}
+
+.c-header__logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+
+/* Toggle
+   ========================================================================== */
+
+.c-header__toggle {
+  border: none;
+  outline: none;
+  padding: $inuit-global-spacing-unit-small;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  @include mq($from: tablet) {
+    display: none;
+  }
+}
+
+.c-header__toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: $black;
+  border-radius: 1px;
+  transition: transform $global-transition, opacity $global-transition;
+
+  &:first-child {
+    transform-origin: left center;
+  }
+
+  &:last-child {
+    transform-origin: left center;
+  }
+}
+
+.c-header__toggle span + span {
+  margin-top: 3px;
+}
+
+.c-header__toggle.is-active span {
+  &:first-child {
+    transform-origin: left center;
+    transform: rotate(45deg) translate3d(1px, -3px, 0);
+  }
+
+  &:nth-child(2) {
+    opacity: 0;
+  }
+
+  &:last-child {
+    transform-origin: left center;
+    transform: rotate(-45deg) translate3d(0, 4px, 0);
+  }
+}
+
+/* Nav
+   ========================================================================== */
+
+.c-header__nav {
+  @include mq($until: tablet) {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height $global-transition; /* [2] */
+  }
+}
+
+.c-header__nav.is-active {
+  max-height: 150px; /* [1] */
+}

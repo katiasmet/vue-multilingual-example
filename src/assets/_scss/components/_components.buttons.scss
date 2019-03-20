@@ -1,0 +1,190 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *        buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+
+.c-btn {
+  display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  font: inherit; /* [3] */
+  text-align: center; /* [4] */
+  margin: 0; /* [4] */
+  border: none; /* [4] */
+  cursor: pointer; /* [5] */
+  padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
+  transition: $global-transition;
+  border-radius: $global-radius;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none; /* [4] */
+  }
+
+  &:focus {
+    outline: none; /* [4] */
+  }
+
+}
+
+
+
+
+
+/* Style variants
+   ========================================================================== */
+
+.c-btn--primary {
+  background-color: $brand-primary;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: lighten($brand-primary, 10%);
+  }
+
+}
+
+@if (variable-exists(brand-secondary)) {
+
+  .c-btn--secondary {
+    background-color: $brand-secondary;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      color: $white;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: lighten($brand-secondary, 10%);
+    }
+
+  }
+
+}
+
+@if (variable-exists(brand-tertiary)) {
+
+  .c-btn--tertiary {
+    background-color: $brand-tertiary;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      color: $white;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: lighten($brand-tertiary, 10%);
+    }
+
+  }
+
+}
+
+
+
+
+
+/* Size variants
+   ========================================================================== */
+
+.c-btn--small {
+  padding: $inuit-global-spacing-unit-tiny $inuit-global-spacing-unit-small;
+}
+
+.c-btn--large {
+  padding: $inuit-global-spacing-unit $inuit-global-spacing-unit-large;
+}
+
+
+
+
+
+/* Ghost buttons
+   ========================================================================== */
+
+/**
+ * Ghost buttons have see-through backgrounds and are bordered.
+ */
+
+$btn-ghost-border-width: 2px;
+
+.c-btn--ghost {
+  border: $btn-ghost-border-width solid currentColor;
+  padding: ($inuit-global-spacing-unit-small - $btn-ghost-border-width) ($inuit-global-spacing-unit - $btn-ghost-border-width);
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    background: none;
+  }
+
+  &.c-btn--small {
+    padding: ($inuit-global-spacing-unit-tiny - $btn-ghost-border-width) ($inuit-global-spacing-unit-small - $btn-ghost-border-width);
+  }
+
+  &.c-btn--large {
+    padding: ($inuit-global-spacing-unit - $btn-ghost-border-width) ($inuit-global-spacing-unit-large - $btn-ghost-border-width);
+  }
+
+  &.c-btn--primary {
+    color: $brand-primary;
+
+    &:hover,
+    &:focus {
+      color: lighten($brand-primary, 10%);
+    }
+
+  }
+
+  @if (variable-exists(brand-secondary)) {
+
+    &.c-btn--secondary {
+      color: $brand-secondary;
+
+      &:hover,
+      &:focus {
+        color: lighten($brand-secondary, 10%);
+      }
+
+    }
+
+  }
+
+  @if (variable-exists(brand-tertiary)) {
+
+    &.c-btn--tertiary {
+      color: $brand-tertiary;
+
+      &:hover,
+      &:focus {
+        color: lighten($brand-tertiary, 10%);
+      }
+
+    }
+
+  }
+
+}

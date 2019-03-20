@@ -1,0 +1,92 @@
+/* ==========================================================================
+   #FORMS
+   ========================================================================== */
+
+/**
+ * 1. Remove border-radius (iOS has a radius by default)
+ */
+
+input {
+  border-radius: 0; /* [1] */
+}
+
+/**
+ * 1. Set `resize` to `vertical`: this is less impactfull than 2D resizing, which can break layout.
+ * 2. Setting `vertical-align` removes whitespace. We use top so it aligns nicely with it's label.
+ *    More info on the vertical-align 'trick' in _elements.image
+ */
+
+textarea {
+  resize: vertical; /* [1] */
+  vertical-align: top; /* [2] */
+}
+
+/**
+ * 1. Remove shadow from inputs in iOS
+ */
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="password"],
+input[type="url"],
+input[type="search"],
+textarea {
+  -webkit-appearance: none; /* [1] */
+}
+
+/**
+ * 1. Set default border color, because the default for <input> and <textarea>
+ *    are different, even in the same browser.
+ *    We use the Chrome default <input> border color, because it has a nice (but subtle) contrast.
+ * 2. Reset gray background in Firefox (when border properties are set).
+ */
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="password"],
+input[type="url"],
+input[type="search"],
+textarea,
+select {
+
+  &[disabled] {
+    cursor: not-allowed;
+    background: initial; /* [2] */
+  }
+
+}
+
+/**
+ * 1. Show arrows in Chrome
+ */
+
+::-webkit-outer-spin-button,
+::-webkit-inner-spin-button {
+  opacity: 1; /* [1] */
+}
+
+/**
+ * 1. Hide placeholder text on focus
+ * CAUTION! If the selectors are chained, the css won't be applied!
+ */
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: transparent; /* [1] */
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  color: transparent; /* [1] */
+}
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  color: transparent; /* [1] */
+}
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent; /* [1] */
+}

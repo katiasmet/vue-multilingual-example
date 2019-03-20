@@ -1,0 +1,31 @@
+{
+    "global": {
+        "title": "Italian<br/> Cuisine"
+    },
+
+    "detail": {
+        "title": "Pizza <br/>Margherita <br/>Recipe",
+        "ingredients_title": "Ingredients",
+        "ingredients": [
+            "125 g flour",
+            "7g yeast",
+            "1/2 coffee spoon salt",
+            "pinch of sugar",
+            "75 ml lukewarm water",
+            "1/2 tablespoon of olive oil",
+            "6 tomatos",
+            "1 onion",
+            "olive oil",
+            "salt and pepper",
+            "1 mozzarella ball, sliced",
+            "oregano of dried basil"
+          ],
+        "preparation_title": "Preparation",
+        "preparation": "<p>Start by preparing the pizza dough by pouring the flour and salt into a bowl. Mix. Put the yeast, sugar and olive oil in a bowl and mix with lukewarm water. Let stand for 5 to 10 minutes. Pour this mixture into the bowl and knead until a smooth paste is obtained. Cover the bowl with a damp cloth and let the dough rest in a warm place, it should double in size.</p><p>Meanwhile, prepare the tomato sauce: Peel and slice the onion and bake it with olive oil in a frying pan or non-stick pan until lightly browned. Peel the tomatoes and cut into cubes. Add them to the pan with the epices and let simmer. Stir occasionally. When the juice begins to evaporate well and the sauce has a smooth consistency, add some salt and pepper.</p><p>Preheat the oven to 230 ° C. Degas the dough and spread it in a circle 25 cm in diameter on a floured worktop. Spread the tomato sauce, then a few cubes of mozzarella. Bake for about fifteen minutes. Serve when hot and topped with basil leaves. Enjoy your meal!</p>"
+    },
+
+    "navigation": {
+      "home": "Home",
+      "pizzas": "Pizzas"
+    }
+}

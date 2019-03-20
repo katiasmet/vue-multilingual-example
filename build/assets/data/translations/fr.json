@@ -1,0 +1,31 @@
+{
+    "global": {
+        "title": "La<br/> cuisine<br/> Italienne"
+    },
+
+    "detail": {
+        "title": "Recette <br/>Pizza <br/>Margherita",
+        "ingredients_title": "Ingrédients",
+        "ingredients": [
+            "125 g de farine",
+            "7 g de levure de boulanger fraîche",
+            "1/2 cuillères à café de sel",
+            "1 pincée de sucre",
+            "75 ml d'eau tiède",
+            "1/2 cuillères à soupe d'huile d'olive",
+            "6 tomates",
+            "1 oignon",
+            "huile d'olive",
+            "sel et poivre",
+            "1 boule de mozzarella coupée en morceaux",
+            "origan ou basilic déshydraté"
+          ],
+        "preparation_title": "Préparation",
+        "preparation": "<p>Commencer par préparer la pâte à pizza en versant la farine et le sel dans un saladier. Mélanger. Mettre la levure, le sucre et l'huile d'olive dans un bol et délayer le tout avec l'eau tiède. Laisser reposer 5 à 10 minutes. Verser ce mélange dans le saladier et pétrir jusqu'à l'obtention d'une pâte homogène. Recouvrir le saladier d'un torchon humide et laisser reposer la pâte dans un endroit bien tiède, elle doit doubler de volume.</p><p>2 Pendant ce temps, préparer la sauce tomates : Éplucher et émincer l'oignon puis le faire revenir avec de l'huile d'olive dans une sauteuse ou une poêle anti-adhésive jusqu'à ce qu'il soit légèrement doré. Peler les tomates et les couper en dés. Les ajouter dans la poêle avec le bouquet garni puis laisser mijoter. Elles vont rendre de l'eau. Remuer de temps en temps. Lorsque le jus commence à être bien évaporé et que la sauce a une consistance 'lisse', saler et poivrer. C'est prêt.</p><p>Préchauffer le four à 230°C. Dégazer la pâte et l'étaler en un cercle de 25 cm de diamètre sur un plan de travail fariné. Étaler la sauce tomate, puis quelques dés de mozzarella. Enfourner pour une quinzaine de minutes (attention, ça dépend des fours car j'ai dû faire cuire 25 minutes). Servir dès la sortie du four garni de feuilles de basilic. Bon appétit !</p>"
+    },
+
+    "navigation": {
+      "home": "Home",
+      "pizzas": "Pizzas"
+    }
+}

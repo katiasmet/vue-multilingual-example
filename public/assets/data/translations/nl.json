@@ -1,0 +1,31 @@
+{
+    "global": {
+        "title": "De<br/> Italiaanse<br/> keuken"
+    },
+
+    "detail": {
+        "title": "Pizza <br/>Margherita <br/>Recept",
+        "ingredients_title": "Ingrediënten",
+        "ingredients": [
+            "125 g bloem",
+            "7 g gist",
+            "1/2 koffielepel zout",
+            "snufje suiker",
+            "75 ml lauw water",
+            "1/2 eetlepels olijfolie",
+            "6 tomaten",
+            "1 ajuin",
+            "olijfolie",
+            "zout en peper",
+            "1 bol mozzarella op schijfjes",
+            "oregano of gedroogde basilicum"
+          ],
+        "preparation_title": "Bereiding",
+        "preparation": "<p>Begin met het voorbereiden van het pizzadeeg door de bloem en het zout in een kom te mengen. Doe de gist, suiker en olijfolie in een kom en meng met lauw water. Laat het 5 tot 10 minuten staan. Giet dit mengsel in de kom en kneed tot een gladde pasta. Bedek de kom met een vochtige doek en laat het deeg rusten op een warme plaats, het moet verdubbelen in grootte.</p><p>Bereid intussen de tomatensaus: pel en snijd de ui en fruit deze in een koekenpan of antiaanbakpan met olijfolie tot deze lichtbruin is. Schil de tomaten en snij in blokjes. Voeg ze toe aan de pan met de kruiden en laat sudderen. Roer af en toe. Wanneer het sap goed begint te verdampen en de saus een gladde consistentie heeft, zout en peper toevoegen.</p><p>Verwarm de oven voor op 230 ° C. Breek het deeg en smeer het in een cirkel met een diameter van 25 cm op een met bloem bestoven werkblad. Smeer de tomatensaus erover en leg vervolgens een paar blokjes mozzarella op de pizza. Bak ongeveer vijftien minuten. Garneer met basilicumblaadjes en serveer direct uit de oven. Smakelijk!</p>"
+    },
+
+    "navigation": {
+      "home": "Home",
+      "pizzas": "Pizza's"
+    }
+}

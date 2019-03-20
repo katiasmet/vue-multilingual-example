@@ -1,0 +1,20 @@
+    .c-content__main {
+      max-width: 700px;
+    }
+
+    .c-content__item {
+      margin-bottom: $gutter-large;
+    }
+
+    .c-content__list-item {
+      margin-bottom: $gutter-tiny;
+    }
+
+    .c-content__image {
+      position: absolute;
+      top: 15vh;
+      right: 0;
+      height: 100%;
+      margin: auto;
+      transform: translate3d(30%, 0, 0);
+    }

@@ -1,0 +1,38 @@
+/**
+ * Headings mixin to use multiple times (in utilities for instance)
+ */
+
+@mixin inuit-heading() {
+  font-family: $font-family-headings;
+  font-weight: $font-weight-headings;
+}
+
+@mixin inuit-h1($important: false) {
+  @include inuit-heading();
+  @include inuit-responsive-font-sizes($h1-font-sizes, $inuit-line-height-h1, $important);
+}
+
+@mixin inuit-h2($important: false) {
+  @include inuit-heading();
+  @include inuit-responsive-font-sizes($h2-font-sizes, $inuit-line-height-h2, $important);
+}
+
+@mixin inuit-h3($important: false) {
+  @include inuit-heading();
+  @include inuit-responsive-font-sizes($h3-font-sizes, $inuit-line-height-h3, $important);
+}
+
+@mixin inuit-h4($important: false) {
+  @include inuit-heading();
+  @include inuit-responsive-font-sizes($h4-font-sizes, $inuit-line-height-h4, $important);
+}
+
+@mixin inuit-h5($important: false) {
+  @include inuit-heading();
+  @include inuit-responsive-font-sizes($h5-font-sizes, $inuit-line-height-h5, $important);
+}
+
+@mixin inuit-h6($important: false) {
+  @include inuit-heading();
+  @include inuit-responsive-font-sizes($h6-font-sizes, $inuit-line-height-h6, $important);
+}

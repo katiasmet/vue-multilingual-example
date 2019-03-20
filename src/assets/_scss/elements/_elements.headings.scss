@@ -1,0 +1,84 @@
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+
+/**
+ * Set default variables to prevent errors.
+ */
+
+$font-weight-headings: bold !default;
+
+$inuit-font-weight-h1: $font-weight-headings !default;
+$inuit-line-height-h1: auto !default;
+
+$inuit-font-weight-h2: $font-weight-headings !default;
+$inuit-line-height-h2: auto !default;
+
+$inuit-font-weight-h3: $font-weight-headings !default;
+$inuit-line-height-h3: auto !default;
+
+$inuit-font-weight-h4: $font-weight-headings !default;
+$inuit-line-height-h4: auto !default;
+
+$inuit-font-weight-h5: $font-weight-headings !default;
+$inuit-line-height-h5: $inuit-global-line-height !default;
+
+$inuit-font-weight-h6: $font-weight-headings !default;
+$inuit-line-height-h6: $inuit-global-line-height !default;
+
+$h1-font-sizes: (
+  null: 36px,
+) !default;
+
+$h2-font-sizes: (
+  null: 28px,
+) !default;
+
+$h3-font-sizes: (
+  null: 24px,
+) !default;
+
+$h4-font-sizes: (
+  null: 20px,
+) !default;
+
+$h5-font-sizes: (
+  null: 18px,
+) !default;
+
+$h6-font-sizes: (
+  null: 16px,
+) !default;
+
+/**
+ * Apply heading mixins
+ */
+
+h1 {
+  @include inuit-h1();
+  text-decoration: underline;
+  margin-bottom: $gutter-large;
+}
+
+h2 {
+  @include inuit-h2();
+  font-family: $font-family-global;
+  font-weight: $font-weight-bold;
+  margin-bottom: $gutter-tiny;
+}
+
+h3 {
+  @include inuit-h3();
+}
+
+h4 {
+  @include inuit-h4();
+}
+
+h5 {
+  @include inuit-h5();
+}
+
+h6 {
+  @include inuit-h6();
+}

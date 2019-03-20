@@ -1,0 +1,15 @@
+/* ==========================================================================
+   #Selection
+   ========================================================================== */
+
+::-moz-selection {
+  background: rgba($brand-primary, 0.99);
+  color: $white;
+  text-shadow: none;
+}
+
+::selection {
+  background: rgba($brand-primary, 0.99);
+  color: $white;
+  text-shadow: none;
+}

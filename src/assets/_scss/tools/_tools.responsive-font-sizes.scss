@@ -1,0 +1,58 @@
+/**
+ * Loosely based on
+ * https://www.smashingmagazine.com/2015/06/responsive-typography-with-sass-maps/
+ *
+ * Usage:
+ * Create a font-size list, based on mq-breakpoints.
+ *
+ * $font-size-list: (
+ *   <breakpoint>: (<font-size>, <line-height [optional]>),
+ *   <breakpoint>: <font-size>,
+ * );
+ *
+ * The line-height is an optional parameter, which defaults to
+ * `$inuit-line-height-<heading>` (e.g. $inuit-line-height-h1),
+ * which itself defaults to `auto`.
+ *
+ * See _elements.headings for examples.
+ */
+
+@mixin inuit-responsive-font-sizes($fs-map, $fs-line-height: auto, $important: false, $fs-breakpoints: $mq-breakpoints) {
+
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    $font-size: null;
+    $line-height: $fs-line-height;
+
+    // Check if line-height is defined
+    @if type-of($fs-font-size) == "list" {
+      $font-size: nth($fs-font-size, 1);
+
+      @if (length($fs-font-size) > 1) {
+        $line-height: nth($fs-font-size, 2);
+      }
+
+    } @else {
+      $font-size: $fs-font-size;
+    }
+
+    @if $fs-breakpoint == null {
+      // Set the smallest font-size without a media query
+      @include inuit-font-size($font-size, $line-height, $important);
+    } @else {
+
+      // Check if the breakpoint exists
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      } @else {
+        @error "`#{$fs-breakpoint}` is not a key in `#{$fs-breakpoints}`";
+      }
+
+      @include mq($from: $fs-breakpoint) {
+        @include inuit-font-size($font-size, $line-height, $important);
+      }
+
+    }
+
+  }
+
+}

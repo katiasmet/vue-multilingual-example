@@ -1,0 +1,7 @@
+.u-error {
+  color: map-get($notices, error) !important;
+}
+
+.u-success {
+  color: map-get($notices, success);
+}

@@ -1,0 +1,63 @@
+/* ==========================================================================
+   #ALIGN
+   ========================================================================== */
+
+/**
+ * Utility classes to put specific spacing values onto elements. The below loop
+ * will generate us a suite of classes like:
+ *
+ *     .u-align-left {}
+ *     .u-align-center {}
+ *     .u-align-right {}
+ *     .u-align-right@mobile {}
+ */
+
+/* stylelint-disable string-quotes */
+
+$inuit-align-directions: (
+  '-left': left,
+  '-center': center,
+  '-right': right,
+) !default;
+
+@mixin inuit-align($breakpoint: null) {
+
+  @each $direction-namespace, $direction-rule in $inuit-align-directions {
+
+    .u-align#{$direction-namespace}#{$breakpoint} {
+      text-align: $direction-rule !important;
+    }
+
+  }
+
+}
+
+/**
+ * Basic align classes
+ *  .u-align-left {}
+ *  .u-align-center {}
+ *  .u-align-right {}
+ */
+@include inuit-align();
+
+/**
+ * Responsive align classes
+ *  .u-align-left@tablet {}
+ *  .u-align-center@wide {}
+ *  .u-align-right@mobile {}
+ */
+
+@if $responsive-align-classes == true {
+
+  @if (variable-exists(mq-breakpoints)) {
+
+    @each $inuit-bp-name, $inuit-bp-value in $mq-breakpoints {
+
+      @include mq($from: $inuit-bp-name) {
+        @include inuit-align(#{$inuit-widths-breakpoint-separator}#{$inuit-bp-name});
+      }
+    }
+  }
+}
+
+/* stylelint-enable string-quotes */
