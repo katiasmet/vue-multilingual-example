@@ -20,15 +20,17 @@ const multiroutes = {
 }
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
   routes: [
     {
-        path: multiroutes.home.en,
+        path: '/',
         name: 'Home',
         component: Home,
-        alias: Object.values(multiroutes.home).splice(1),
-        meta: multiroutes.home
+        alias: ['/nl', '/fr'],
+        meta: {
+          en: '/',
+          nl: '/nl',
+          fr: '/fr'
+        }
     },
 
     {
@@ -45,6 +47,8 @@ export default new Router({
       component: Home
     }
   ],
+  mode: 'history',
+  base: process.env.BASE_URL,
 
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }

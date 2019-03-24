@@ -46,11 +46,9 @@ export default {
         let redirect = false
         let path = ''
 
-        for (let language in this.languages) {
-          if (lang === language && to.path !== to.meta[language]) {
-            redirect = true
-            path = to.meta[language]
-          }
+        if (to.path !== to.meta[lang]) {
+          redirect = true
+          path = to.meta[lang]
         }
 
         if (redirect) {

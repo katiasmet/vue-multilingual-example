@@ -27,11 +27,9 @@ export default {
       let redirect = false
       let path = this.$route.path
 
-      for (let language in this.languages) {
-        if (currentLang === language && this.$route.path !== this.$route.meta[language]) {
-          redirect = true
-          path = this.$route.meta[language]
-        }
+      if (this.$route.path !== this.$route.meta[currentLang]) {
+        redirect = true
+        path = this.$route.meta[currentLang]
       }
 
       if (redirect) {
